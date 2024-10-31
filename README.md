@@ -1,6 +1,8 @@
-# Clon de Threads
+<div style="width: 500px; height: 300px; margin-inline:auto;" >
+   <img src="resources/Threads.webp" alt="Logo" fill  />
+</div>
 
-## Resumen
+## Clon de Threads
 
 MiClonThreads es una plataforma de redes sociales diseñada para facilitar la comunicación y la interacción entre usuarios a través de publicaciones breves y mensajes. Inspirada en la funcionalidad de Threads, esta aplicación permite a los usuarios compartir pensamientos, noticias, y actualizaciones en tiempo real, seguir a otros usuarios, y participar en conversaciones.
 
@@ -169,7 +171,7 @@ bun install -D prettier prettier-plugin-tailwindcss
   │   │   ├── post.ts
   │   │   ├── user.ts
   │   │   └── auth.ts
-  │   ├── /pages                        # Páginas de Next.js
+  │   ├── /app                          # Páginas de Next.js
   │   │   ├── /api                      # Rutas API
   │   │   ├── index.tsx
   │   │   ├── login.tsx
@@ -185,4 +187,26 @@ bun install -D prettier prettier-plugin-tailwindcss
   └── package.json
 
 
+```
+
+### Variables de entorno
+
+Agregar variables de entorno al archivo `.example.env` despues clonarlo en el `.env`
+
+- Se usa `NEXT_PUBLIC_` para variables globales del frontend
+
+```bash
+   NEXT_PUBLIC_VALUE=""
+```
+
+- Se usa `PRIVATE_` para variables privadas del backend
+
+```bash
+   PRIVATE_VALUE=""
+```
+
+- Se usa `DB_` para variables de base de datos
+
+```bash
+   DB_VALUE=""
 ```
