@@ -103,15 +103,13 @@ bun install -D prettier prettier-plugin-tailwindcss
 }
 ```
 
-> [!IMPORTANT]
-
-> - No se aceptan cambios en el archivo `.eslintrc.json` o `.prettierrc.json`
-> - No se aceptan cambios en el archivo `tailwind.config.ts`
-> - No se aceptan cambios en el archivo `tsconfig.json`
-> - No se aceptan cambios en el archivo `next.config.ts`
-> - No se puede modificar los componentes de Shadcn Ui directamente
-> - Crear colores como variables globales en el archivo `app/globals.css`
-> - No se usaran archivos de barrels en Next.js
+- No se aceptan cambios en el archivo `.eslintrc.json` o `.prettierrc.json`
+- No se aceptan cambios en el archivo `tailwind.config.ts`
+- No se aceptan cambios en el archivo `tsconfig.json`
+- No se aceptan cambios en el archivo `next.config.ts`
+- No se puede modificar los componentes de Shadcn Ui directamente
+- Crear colores como variables globales en el archivo `app/globals.css`
+- No se usaran archivos de barrels en Next.js
 
 ```css
 @layer base {
