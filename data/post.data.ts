@@ -20,4 +20,13 @@ export const POST_DATA: PostView[] = [
     media: ["/images/post-3.jpg"],
     //reactions:{ likes: 10, comments: 5, reposts: 2, shares: 3 },
   },
+  {
+    id: "3",
+    urlProfile: "/images/alice-1.webp",
+    name: "alice2",
+    date: "2024/11/02",
+    description: "#encuesta Prefieres:\n—Películas.\n—Series.",
+    media: ["/images/post-2.jpg"],
+    //reactions:{ likes: 10, comments: 5, reposts: 2, shares: 3 },
+  },
 ];

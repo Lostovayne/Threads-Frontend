@@ -71,13 +71,14 @@ const PostDescription: FC<{ description: string }> = ({ description }) => {
 	const descriptionSplit = Format.splitSentenceByHashTag(description)
 
 	return (
-		<p className="mt-1 text-sm">
+		<p className="mt-1 text-md">
 			{
 				descriptionSplit.map((sentence, index) => (
 					<span
 						key={index}
 						className={cn(
-							['#', '@'].some(word => sentence.startsWith(word)) && 'text-blue-500',
+							['#', '@'].some(word => sentence.startsWith(word)) && 'text-blue-600 dark:text-blue-400 font-bold',
+							'whitespace-pre-wrap'
 						)}
 					>{sentence} </span>
 				))
