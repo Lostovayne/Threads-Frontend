@@ -19,7 +19,7 @@ const HeaderComponent: FC<HeaderComponentProps> = ({}): ReactElement => {
           <ButtonUiComponent variant={"outline"}>
             Iniciar sesión
           </ButtonUiComponent>
-          <ButtonUiComponent className="bg-black" variant={"default"}>
+          <ButtonUiComponent className="dark:bg-black" variant={"default"}>
             Abrir app
           </ButtonUiComponent>
         </div>
