@@ -18,7 +18,7 @@ export const POST_DATA: PostView[] = [
     date: "10 horas",
     description: "Probando Threads",
     media: ["/images/post-3.jpg"],
-    //reactions:{ likes: 10, comments: 5, reposts: 2, shares: 3 },
+    reactions:{ likes: 1, comments: 5, reposts: 0, shares: 1 },
   },
   {
     id: "3",
@@ -27,6 +27,6 @@ export const POST_DATA: PostView[] = [
     date: "1 día",
     description: "#encuesta Prefieres:\n—Películas.\n—Series.",
     media: ["/images/post-2.jpg"],
-    //reactions:{ likes: 10, comments: 5, reposts: 2, shares: 3 },
+    reactions:{ likes: 1, comments: 2, reposts: 3, shares: 4 },
   },
 ];

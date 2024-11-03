@@ -5,33 +5,26 @@ import HeartIcon from "./icons/heart";
 import MessageIcon from "./icons/message";
 import RepostIcon from "./icons/repost";
 import SendIcon from "./icons/send";
+import { PostViewReactions } from "@/interfaces/post/post-view.interface";
 
-interface PostReactionsProps {
-  likes?: number;
-  comments?: number;
-  reposts?: number;
-  shares?: number;
-}
+export const PostReactions: FC<PostViewReactions> = (reactions): ReactElement => {
+  const { likes, comments, reposts, shares } = reactions;
 
-export const PostReactions: FC<PostReactionsProps> = ({
-  likes,
-  comments,
-  reposts,
-  shares,
-}): ReactElement => {
+  // TODO: formato de cantidades (' ', 1, 369, 1 mil, 2 mil, etc)
+
   return (
     <div className="mt-1.5 flex w-1/3 items-center gap-1">
       <ReactionButton>
-        <HeartIcon /> 10
+        <HeartIcon /> {likes ? likes : ''}
       </ReactionButton>
       <ReactionButton>
-        <MessageIcon />
+        <MessageIcon /> {comments? comments : ''}
       </ReactionButton>
       <ReactionButton>
-        <RepostIcon />
+        <RepostIcon /> {reposts? reposts : ''}
       </ReactionButton>
       <ReactionButton>
-        <SendIcon />
+        <SendIcon /> {shares? shares : ''}
       </ReactionButton>
     </div>
   );
