@@ -1,33 +1,30 @@
+import HeaderComponent from "@/components/common/header-mobile";
 import { PostMain } from "@/components/features/posts/post-main";
+import { Separator } from "@/components/ui/separator";
 import { POST_DATA } from "@/data/post.data";
 
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
-
-      <PostList />
+      <HeaderComponent />
+      <section className="mx-auto mt-10 max-w-[600px] rounded-3xl border border-zinc-300/70 shadow-xl max-md:pr-3">
+        <PostList />
+      </section>
     </>
   );
 }
 
 const PostList = () => {
   return (
-    <div className="flex flex-col mt-2 gap-4 sm:gap-0 px-1">
-      {
-        POST_DATA.map((post) => (
-          <PostMain
-            key={post.id}
-            id={post.id}
-            urlProfile={post.urlProfile}
-            name={post.name}
-            date={post.date}
-            description={post.description}
-            media={post.media}
-            reactions={post.reactions}
-          />
-        ))
-      }
+    <div className="mt-2 sm:gap-0">
+      {POST_DATA.map((post) => (
+        <div key={post.id}>
+          <div className="px-5 pt-5">
+            <PostMain {...post} />
+          </div>
+          <Separator className="mt-1 bg-zinc-300/80" />
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};

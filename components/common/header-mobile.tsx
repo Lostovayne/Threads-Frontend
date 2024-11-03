@@ -11,7 +11,7 @@ interface HeaderComponentProps {
 const HeaderComponent: FC<HeaderComponentProps> = ({}): ReactElement => {
   return (
     <>
-      <header className="h-22 flex flex-col items-center justify-between gap-2 p-2.5">
+      <header className="h-22 hidden flex-col items-center justify-between gap-2 p-2.5 max-lg:flex">
         <div className="size-8">
           <ThreadsComponent />
         </div>
@@ -24,7 +24,7 @@ const HeaderComponent: FC<HeaderComponentProps> = ({}): ReactElement => {
           </ButtonUiComponent>
         </div>
       </header>
-      <Separator className="my-1 w-full" />
+      <Separator className="my-1 hidden w-full max-lg:block" />
     </>
   );
 };
