@@ -72,7 +72,7 @@ const PostHeader: FC<PostHeaderProps> = ({ name, date }) => {
   return (
     <div className="flex gap-2">
       <span className="font-bold">{name}</span>
-      <span className="text-xs font-medium text-gray-500/80 md:text-sm">
+      <span className="text-gray-500/8Adding corrections to the post0 text-xs font-medium md:text-sm">
         {date}
       </span>
     </div>
