@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <HeaderComponent />
-      <section className="mx-auto mt-10 max-w-[600px] rounded-3xl border border-zinc-300/70 shadow-xl max-md:pr-3">
+      <section className="mx-auto mt-10 max-w-[650px] rounded-3xl border border-zinc-300/70 bg-white shadow-xl max-md:pr-3">
         <PostList />
       </section>
     </>
