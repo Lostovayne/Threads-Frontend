@@ -1,35 +1,23 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { PostView } from "@/interfaces/post/post-view.interface";
-import { Format } from "@/lib/format";
-import { cn } from "@/lib/utils";
 import { FC } from "react";
 
-import MoreIcon from "./icons/more";
+import { PostDetail } from "./post-detail";
+import { PostReactions } from "./post-reactions";
 
-export const Post: FC<PostView> = ({
-  urlProfile,
-  name,
-  date,
-  description,
-  media = [],
-}) => {
+export const Post: FC<PostView> = (post) => {
+  const { reactions, ...rest } = post;
   return (
-    <>
-      <div className="overflow-hidden break-words pt-1">
-        <PostProfileImage urlProfile={urlProfile} />
-      </div>
-      <div className="overflow-hidden break-words">
-        <div className="flex items-center justify-between">
-          <PostHeader name={name} date={date} />
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-full [&_svg]:size-5"
-          >
-            <MoreIcon />
-          </Button>
+    <Card className="border-none shadow-none">
+      <CardContent className="grid grid-cols-[55px_1fr] gap-x-1 p-0">
+        <PostDetail {...post} />
+        <div className="col-start-2">
+          <PostReactions {...reactions} />
         </div>
+         dev
+      </CardContent>
+    </Card>
+
         <div className="grid grid-cols-6">
           <div className="col-span-5">
             <PostDescription description={description} />

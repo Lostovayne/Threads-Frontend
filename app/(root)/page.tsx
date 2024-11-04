@@ -1,5 +1,5 @@
 import HeaderComponent from "@/components/common/header-mobile";
-import { PostMain } from "@/components/features/posts/post-main";
+import { Post } from "@/components/features/posts/post";
 import { Separator } from "@/components/ui/separator";
 import { POST_DATA } from "@/data/post.data";
 
@@ -20,7 +20,7 @@ const PostList = () => {
       {POST_DATA.map((post) => (
         <div key={post.id}>
           <div className="px-5 pt-5">
-            <PostMain {...post} />
+            <Post {...post} />
           </div>
           <Separator className="mt-1 bg-zinc-300/80" />
         </div>
