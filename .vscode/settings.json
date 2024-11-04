@@ -3,5 +3,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  "conventionalCommitBuilder.scopes": ["Header"]
+  "conventionalCommitBuilder.scopes": ["Header", "Post"]
 }
