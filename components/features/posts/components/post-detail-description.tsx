@@ -6,19 +6,22 @@ export const PostDetailDescription: FC<{ description: string }> = ({ description
 	const descriptionSplit = Format.splitSentenceByHashTag(description);
 
 	return (
-		<p className="text-md mt-1">
-			{descriptionSplit.map((sentence, index) => (
-				<span
-					key={index}
-					className={cn(
-						["#", "@"].some((word) => sentence.startsWith(word)) &&
-						"font-bold text-blue-600 dark:text-blue-400",
-						"whitespace-pre-wrap text-balance text-base font-medium text-zinc-700"
-					)}
-				>
-					{`${sentence} `}
-				</span>
-			))}
+		<p className="leading-5">
+			{descriptionSplit.map((sentence, index) => {
+				const isHashTag = ["#", "@"].some((word) => sentence.startsWith(word))
+
+				return (
+					<span
+						key={index}
+						className={cn(
+							isHashTag && "font-bold text-blue-400 dark:text-blue-500/80",
+							!isHashTag && "whitespace-pre-wrap text-balance text-md sm:text-lg font-medium text-base dark:text-zinc-200/80",
+						)}
+					>
+						{`${sentence} `}
+					</span>
+				)
+			})}
 		</p>
 	);
 };

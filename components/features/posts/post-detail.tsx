@@ -27,8 +27,8 @@ export const PostDetail: FC<PostView> = (post) => {
             <MoreIcon />
           </Button>
         </div>
-        <div className="grid grid-cols-6">
-          <div className="col-span-5">
+        <div className="">
+          <div className="">
             <PostDetailDescription description={description} />
             <PostDetailMedia media={media} />
           </div>

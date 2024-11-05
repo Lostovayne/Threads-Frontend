@@ -7,9 +7,9 @@ interface PostDetailProfileImageProps {
 }
 
 export const PostDetailProfileImage: FC<PostDetailProfileImageProps> = ({ urlProfile, size = 9, }) => {
-	
+
 	return (
-		<figure className="flex justify-center">
+		<figure className="flex justify-center mt-1">
 			<Avatar className={`h-${size} w-${size}`}>
 				<AvatarImage
 					src={urlProfile}

@@ -11,7 +11,8 @@ export default function Home() {
       <HeaderComponent />
       <NavDesktop />
       <NavMobile />
-      <section className="mx-auto mt-10 max-w-[650px] rounded-3xl border border-zinc-300/70 bg-white shadow-xl max-md:pr-3">
+
+      <section className="mx-auto mt-10 max-w-[650px] sm:rounded-3xl border  border-300/70 dark:border-gray-700 bg-background shadow-xl max-md:pr-3">
         <PostList />
       </section>
     </>
@@ -23,10 +24,10 @@ const PostList = () => {
     <div className="mt-2 sm:gap-0">
       {POST_DATA.map((post) => (
         <div key={post.id}>
-          <div className="px-5 pt-5">
+          <div className="px-0 pt-1 sm:pt-3 sm:px-5">
             <Post {...post} />
           </div>
-          <Separator className="mt-1 bg-zinc-300/80" />
+          <Separator className="mt-1 bg-zinc-500/80 dark:bg-gray-700/85" />
         </div>
       ))}
     </div>

@@ -1,18 +1,18 @@
+import { Format } from "@/lib/format";
 import { FC } from "react";
 
 interface PostDetailHeaderProps {
 	name: string;
-	date: string;	// format: yyyy/mm/dd
+	date: Date;
 }
 
 export const PostDetailtHeader: FC<PostDetailHeaderProps> = ({ name, date }) => {
 
 	return (
-		<div className="flex gap-2">
-			<span className="font-bold">{name}</span>
-			<span className="text-xs font-medium text-gray-500/80 md:text-sm">
-				{/* TODO:format date (1 dia, 10 horas, ...) */}
-				{date}
+		<div className="flex gap-2 items-center">
+			<span className="font-bold sm:text-md">{name}</span>
+			<span className="text-sm md:text-md font-medium text-gray-700/80 dark:text-zinc-400/80">
+				{Format.timeAgo(date)}
 			</span>
 		</div>
 	);
