@@ -2,7 +2,7 @@ export interface PostView {
   id: string;
   urlProfile: string;
   name: string;
-  date: string;
+  date: Date;
   description: string;
   media: string[];
   reactions: PostViewReactions;

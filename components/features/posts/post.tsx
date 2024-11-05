@@ -15,7 +15,6 @@ export const Post: FC<PostView> = (post) => {
           <div className="col-start-2">
             <PostReactions {...reactions} />
           </div>
-          dev
         </CardContent>
       </Card>
     </>
