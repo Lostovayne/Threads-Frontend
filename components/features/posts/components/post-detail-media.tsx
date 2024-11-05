@@ -6,7 +6,7 @@ export const PostDetailMedia: React.FC<PostDetailMediaProps> = ({ media }) => {
 	// TODO: mostrar múltiples imágenes
 
 	return (
-		<div className="relative mt-2 flex h-96 max-w-96 overflow-hidden">
+		<div className="relative mt-2 flex h-auto max-h-96 w-auto	 overflow-hidden">
 			<div className="">
 				<img
 					src={media[0]}

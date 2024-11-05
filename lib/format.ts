@@ -43,9 +43,9 @@ export class Format {
     else if (reactions < 1000) {
       return reactions.toString();
     } else if (reactions < 1000000) {
-      return (reactions / 1000).toFixed(1).replace(".0", "") + "k";
+      return (reactions / 1000).toFixed(1).replace(".0", "") + "Mil";
     } else {
-      return (reactions / 1000000).toFixed(1).replace(".0", "") + "M";
+      return (reactions / 1000000).toFixed(1).replace(".0", "") + "MM";
     }
   }
 }

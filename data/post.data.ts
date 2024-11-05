@@ -14,11 +14,11 @@ export const POST_DATA: PostView[] = [
   {
     id: "2",
     urlProfile: "/images/alice-2.webp",
-    name: "alice",
-    date: new Date('2024-11-04T20:10:00'),
-    description: "Probando Threads",
-    media: ["/images/post-3.jpg"],
-    reactions:{ likes: 1, comments: 5, reposts: 0, shares: 1 },
+    name: "2000sanxiety",
+    date: new Date('2024-11-04T20:18:00'),
+    description: "Anne Hathaway, Emily Blunt and Gisele Bündchen BTS of The Devil Wears Prada (2006)",
+    media: ["/images/post-4.jpg"],
+    reactions:{ likes: 2500, comments: 14, reposts: 73, shares: 1 },
   },
   {
     id: "3",
