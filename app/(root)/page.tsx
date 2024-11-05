@@ -11,7 +11,8 @@ export default function Home() {
       <HeaderComponent />
       <NavDesktop />
       <NavMobile />
-      <section className="mx-auto mt-10 max-w-[650px] rounded-1xl sm:rounded-3xl border  border-300/70 dark:border-gray-700 bg-background shadow-xl max-md:pr-3">
+
+      <section className="mx-auto mt-10 max-w-[650px] sm:rounded-3xl border  border-300/70 dark:border-gray-700 bg-background shadow-xl max-md:pr-3">
         <PostList />
       </section>
     </>
