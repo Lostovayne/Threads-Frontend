@@ -6,7 +6,7 @@ import ThreadsComponent from "./icons/threads-icon";
 const HeaderComponent: FC = (): ReactElement => {
   return (
     <>
-      <header className="h-22 hidden flex-col items-center justify-between gap-3 bg-white p-2.5 pt-3 max-lg:flex">
+      <header className="h-22 hidden flex-col items-center justify-between gap-3 bg-white p-2.5 pt-3 max-md:flex">
         <div className="size-8">
           <ThreadsComponent />
         </div>
