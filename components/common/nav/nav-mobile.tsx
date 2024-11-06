@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 import HeartIcon from "../icons/heart-icon";
 import HomeIcon from "../icons/home-icon";
@@ -18,7 +17,7 @@ import { IconNav } from "./icon-nav";
 export const NavMobile = () => {
   const pathname = usePathname();
   return (
-    <nav className="absolute bottom-0 flex h-[68px] w-full items-center justify-between bg-white bg-opacity-80 px-2 backdrop-blur-md md:hidden">
+    <nav className="fixed bottom-0 z-50 flex h-[68px] w-full items-center justify-between bg-white bg-opacity-80 px-2 backdrop-blur-md md:hidden">
       <IconNav
         icon={<HomeIcon isFilled={pathname === "/"} height={26} width={26} />}
         path="/"
