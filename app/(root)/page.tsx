@@ -7,15 +7,15 @@ import { POST_DATA } from "@/data/post.data";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <HeaderComponent />
       <NavDesktop />
       <NavMobile />
 
-      <section className="mx-auto mt-10 max-w-[650px] sm:rounded-3xl border  border-300/70 dark:border-gray-700 bg-background shadow-xl max-md:pr-3">
+      <section className="border-ColorBorder mx-auto max-w-[650px] border bg-background bg-white shadow-xl dark:border-gray-700 sm:rounded-3xl">
         <PostList />
       </section>
-    </>
+    </div>
   );
 }
 
@@ -24,10 +24,10 @@ const PostList = () => {
     <div className="mt-2 sm:gap-0">
       {POST_DATA.map((post) => (
         <div key={post.id}>
-          <div className="px-0 pt-1 sm:pt-3 sm:px-5">
+          <div className="px-0 pt-1 sm:px-5 sm:pt-3">
             <Post {...post} />
           </div>
-          <Separator className="mt-1 bg-zinc-500/80 dark:bg-gray-700/85" />
+          <Separator className="mt-1 bg-zinc-300/80 dark:bg-gray-700/85" />
         </div>
       ))}
     </div>

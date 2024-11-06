@@ -7,7 +7,7 @@ export const POST_DATA: PostView[] = [
     name: "romina_sita_misifu_",
     date: new Date('2024-11-04T10:00:00'),
     description:
-      "Creo que esto es lo más personal que daré a conocer.... Y solo diré que la infertilidad es muy dura 🥺 pensé que si sucedería este mes, pero no ....me rompe el alma ",
+      "Dakota Johnson with Amber Heard. #Celebrity",
     media: ["/images/post-1.jpg", "/images/post-2.jpg"],
     reactions: { likes: 10, comments: 5, reposts: 2, shares: 3 },
   },

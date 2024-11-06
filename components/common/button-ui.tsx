@@ -20,7 +20,10 @@ const ButtonUiComponent: FC<ButtonUiComponentProps> = ({
       <Button
         {...rest}
         variant={variant}
-        className={cn("h-8 w-full rounded-lg text-sm font-medium", className)}
+        className={cn(
+          "h-[2.15rem] w-full rounded-xl text-sm font-semibold",
+          className
+        )}
       >
         {children}
       </Button>

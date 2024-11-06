@@ -14,7 +14,7 @@ const ReactionButton: FC<ReactionButtonProps> = ({
     <Button
       variant="ghost"
       size="icon"
-      className="w-auto gap-[3px] rounded-full pr-4 md:pr-6 [&_svg]:size-[1.25rem] text-gray-800/80 dark:text-zinc-200/75 font-semibold dark:font-normal" 
+      className="w-auto gap-[2px] rounded-full px-2 font-medium text-gray-800/80 dark:font-normal dark:text-zinc-200/75 md:mr-3 [&_svg]:size-[1.25rem]"
     >
       {children}
       {reactionParam}
