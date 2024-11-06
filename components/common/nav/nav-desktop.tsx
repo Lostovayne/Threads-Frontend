@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 import HeartIcon from "../icons/heart-icon";
 import HomeIcon from "../icons/home-icon";
@@ -51,7 +50,7 @@ export const NavDesktop = () => {
           <PinIcon />
         </Button>
         <Button
-          // variant={"ghost"}
+          variant="ghost"
           className="h-12 w-16 text-[#b1b1b1] hover:bg-transparent hover:text-black"
         >
           <MenuIcon />

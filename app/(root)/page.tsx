@@ -7,15 +7,17 @@ import { POST_DATA } from "@/data/post.data";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <HeaderComponent />
+    <>
       <NavDesktop />
-      <NavMobile />
+      <div className="relative">
+        <HeaderComponent />
+        <NavMobile />
 
-      <section className="border-ColorBorder mx-auto max-w-[650px] border bg-background bg-white shadow-xl dark:border-gray-700 sm:rounded-3xl">
-        <PostList />
-      </section>
-    </div>
+        <section className="border-ColorBorder mx-auto max-w-[650px] border bg-background bg-white shadow-xl dark:border-gray-700 sm:rounded-3xl">
+          <PostList />
+        </section>
+      </div>
+    </>
   );
 }
 
