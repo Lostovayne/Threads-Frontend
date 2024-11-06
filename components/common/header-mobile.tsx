@@ -11,7 +11,7 @@ interface HeaderComponentProps {
 const HeaderComponent: FC<HeaderComponentProps> = ({}): ReactElement => {
   return (
     <>
-      <header className="h-22 hidden flex-col items-center justify-between gap-2 p-2.5 max-lg:flex">
+      <header className="h-22 hidden flex-col items-center justify-between gap-2 p-2.5 max-md:flex">
         <div className="size-8">
           <ThreadsComponent />
         </div>
