@@ -15,13 +15,12 @@ import {
 import { Camera } from "lucide-react";
 import { ChevronRight } from 'lucide-react';
 import MessageIcon from "../posts/icons/message";
+import { useAuthModalStore } from "@/store/auth/auth-modal.store";
 
-interface AuthRegistrationModalProps {
-  open: boolean
-  setIsOpen: () => void
-}
 
-export const AuthRegistrationModal:FC<AuthRegistrationModalProps> = ({open, setIsOpen}) => {
+export const AuthRegistrationModal = () => {
+  const open = useAuthModalStore((state) => state.isOpen);
+  const setIsOpen = useAuthModalStore((state) => state.setIsOpen);
 
   return (
     <Dialog open={open} onOpenChange={setIsOpen}>
