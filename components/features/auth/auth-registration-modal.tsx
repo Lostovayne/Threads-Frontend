@@ -11,6 +11,7 @@ import {
   DialogTitle, //DialogTrigger,
 } from "@/components/ui/dialog";
 import { ICON_MAP } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { useAuthModalStore } from "@/store/auth/auth-modal.store";
 import { Camera } from "lucide-react";
 import { ChevronRight } from "lucide-react";
@@ -33,26 +34,29 @@ export const AuthRegistrationModal: FC = () => {
 
   return (
     <Dialog open={open} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-background top-3/4">
         <DialogHeader>
-          <DialogTitle className="flex w-full flex-col items-center text-center gap-[1rem]">
-            <div className={`${infoModal.iconColor} [&_svg]:size-[3.25rem]`}>
-              <TitleIcon />
+          <DialogTitle className="flex w-full flex-col items-center gap-[1rem] text-center">
+            {/* <div className={cn( "[&_svg]:size-[3.25rem]", infoModal.iconColor)}> */}
+            <div className={cn( "[&_svg]:size-[3.25rem]", "text-red-500")}>
+              <TitleIcon/>
             </div>
             <span className="text-3xl font-extrabold">{infoModal.title}</span>
           </DialogTitle>
           <DialogDescription>
-            <span className="text-md text-foreground/100 flex mx-auto text-center w-[80%]">{infoModal.description}</span>
+            <span className="text-md mx-auto flex w-[80%] text-center text-foreground/100">
+              {infoModal.description} - {infoModal.iconColor}
+            </span>
           </DialogDescription>
         </DialogHeader>
 
-        <DialogFooter className="mt-3 ">
+        <DialogFooter className="mt-3">
           <DialogClose asChild>
             <Button
               type="button"
               variant="ghost"
               onClick={() => console.log("hola")}
-              className="flex w-full justify-between gap-5 p-7 border border-foreground/30"
+              className="flex w-full justify-between gap-5 border border-foreground/30 p-7"
             >
               <Camera style={{ height: 36, width: 36 }} />
               <span className="text-md font-bold">{infoModal.textButton}</span>
