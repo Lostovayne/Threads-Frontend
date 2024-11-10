@@ -19,13 +19,13 @@ export const NavDesktop = () => {
   const pathname = usePathname();
   const iconClass = "";
   return (
-    <nav className="absolute left-0 hidden h-screen w-[68px] flex-col items-center justify-between gap-6 px-10 pb-10 pt-4 md:flex">
+    <nav className="absolute left-0 hidden h-screen w-[68px] flex-col items-center justify-between gap-6 px-10 py-4 md:flex">
       <div>
         <div className="size-8">
           <ThreadsComponent />
         </div>
       </div>
-      <div>
+      <div className="flex flex-col items-center justify-between gap-4">
         <IconNav icon={<HomeIcon isFilled={pathname === "/"} />} path="/" />
 
         <IconNav icon={<SearchIcon />} path="/search" />
@@ -39,7 +39,10 @@ export const NavDesktop = () => {
           icon={<HeartIcon isFilled={pathname === "/activity"} />}
           path="/activity"
         />
-        <IconNav icon={<UserIcon />} path="/user" />
+        <IconNav
+          icon={<UserIcon isFilled={pathname === "/user"} />}
+          path="/user"
+        />
       </div>
 
       <div className="flex flex-col">
