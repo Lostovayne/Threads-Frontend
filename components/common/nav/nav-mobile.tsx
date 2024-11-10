@@ -18,7 +18,7 @@ import { IconNav } from "./icon-nav";
 export const NavMobile = () => {
   const pathname = usePathname();
   return (
-    <nav className="fixed bottom-0 z-50 flex h-[68px] w-full items-center justify-between bg-white bg-opacity-80 px-2 backdrop-blur-md md:hidden">
+    <nav className="fixed bottom-0 z-50 flex h-[68px] w-full items-center justify-between bg-white bg-opacity-80 px-4 backdrop-blur-md dark:bg-black dark:bg-opacity-80 md:hidden">
       <IconNav
         icon={<HomeIcon isFilled={pathname === "/"} height={26} width={26} />}
         path="/"
@@ -28,7 +28,7 @@ export const NavMobile = () => {
 
       <Button
         variant={"ghost"}
-        className="h-12 w-16 rounded-xl text-[#b1b1b1] hover:text-black md:bg-[#f0f0f0]"
+        className="h-12 w-16 rounded-xl text-[#b1b1b1] hover:text-black dark:text-[#565656] md:bg-[#f0f0f0]"
       >
         <PostIcon />
       </Button>

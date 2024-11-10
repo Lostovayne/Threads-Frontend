@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/common/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -27,9 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#fafafa] dark:bg-black antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} bg-[#fafafa] antialiased dark:bg-black`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

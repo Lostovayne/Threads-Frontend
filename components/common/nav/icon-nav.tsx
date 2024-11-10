@@ -20,7 +20,7 @@ export const IconNav = ({ icon, path, customClass }: Props) => {
     <Button
       asChild
       variant={"ghost"}
-      className={`h-12 w-16 rounded-xl md:hover:bg-[#f0f0f0] ${pathname === path ? "text-black hover:text-black" : "text-[#b1b1b1] hover:text-[#b1b1b1]"} ${customClass}`}
+      className={`h-12 w-16 rounded-xl md:hover:bg-[#f0f0f0] md:dark:hover:bg-[#171717] ${pathname === path ? "text-black hover:text-black dark:text-white" : "text-[#b1b1b1] hover:text-[#b1b1b1] dark:text-[#565656] dark:hover:bg-[#171717]"} ${customClass}`}
     >
       <Link href={path}>{icon}</Link>
     </Button>
