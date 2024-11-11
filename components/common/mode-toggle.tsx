@@ -7,9 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Moon, MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import * as React from "react";
 
 import ArrowRightIcon from "./icons/arrow-right-icon";
 import MenuIcon from "./icons/menu-icon";
@@ -50,17 +48,6 @@ export function ModeToggle() {
           </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>
-      {/* <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent> */}
     </DropdownMenu>
   );
 }

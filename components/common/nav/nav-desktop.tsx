@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 import HeartIcon from "../icons/heart-icon";
 import HomeIcon from "../icons/home-icon";
-import MenuIcon from "../icons/menu-icon";
 import PinIcon from "../icons/pin-icons";
 import PlusIcon from "../icons/plus-icon";
 import SearchIcon from "../icons/search-icon";
