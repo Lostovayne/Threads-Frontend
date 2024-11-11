@@ -20,7 +20,7 @@ export function ModeToggle() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="h-12 w-16 text-[#b1b1b1] hover:bg-transparent hover:text-black dark:text-[#565656] dark:hover:bg-[#171717] dark:hover:text-white"
+          className="h-12 w-16 text-[#b1b1b1] outline-none hover:bg-transparent hover:text-black focus-visible:ring-0 dark:text-[#565656] dark:hover:bg-[#171717] dark:hover:text-white"
         >
           <MenuIcon />
         </Button>
@@ -33,7 +33,7 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Button
             variant="ghost"
-            className="flex w-full justify-between rounded-lg p-3 py-6 text-[15px] font-medium hover:cursor-pointer hover:bg-[#f0f0f0] dark:hover:bg-[#212121]"
+            className="flex w-full justify-between rounded-lg p-3 py-6 text-[15px] text-sm font-semibold text-[#2c2c2c] hover:cursor-pointer hover:bg-[#f0f0f0] dark:hover:bg-[#212121]"
           >
             Apariencia
             <ArrowRightIcon />
@@ -42,7 +42,7 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <Button
             variant="ghost"
-            className="flex w-full justify-between rounded-lg p-3 py-6 text-[15px] font-medium hover:cursor-pointer hover:bg-[#f0f0f0] dark:hover:bg-[#212121]"
+            className="flex w-full justify-between rounded-lg p-3 py-6 text-[15px] text-sm font-semibold text-[#2c2c2c] hover:cursor-pointer hover:bg-[#f0f0f0] dark:hover:bg-[#212121]"
           >
             Reportar un problema
           </Button>
