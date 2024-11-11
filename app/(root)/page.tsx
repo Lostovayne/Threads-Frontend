@@ -14,7 +14,7 @@ export default function Home() {
         <HeaderComponent />
         <NavMobile />
 
-        <section className="mx-auto max-w-[650px] border border-ColorBorder bg-background bg-white shadow-xl dark:border-gray-700 sm:rounded-3xl">
+        <section className="mx-auto max-w-[650px] border border-ColorBorder bg-background bg-white shadow-xl dark:border-gray-200/15 dark:bg-[#181818] sm:rounded-t-3xl">
           <PostList />
         </section>
       </div>
@@ -31,13 +31,12 @@ const PostList = () => {
             <div className="px-0 pt-1 sm:px-5 sm:pt-3">
               <Post {...post} />
             </div>
-            <Separator className="mt-1 bg-zinc-300/80 dark:bg-gray-700/85" />
+            <Separator className="mt-1 bg-zinc-300/80 dark:bg-gray-200/15" />
           </div>
         ))}
       </div>
-      
+
       <AuthRegistrationModal />
     </>
-
   );
 };

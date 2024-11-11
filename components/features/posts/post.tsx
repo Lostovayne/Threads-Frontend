@@ -9,7 +9,7 @@ export const Post: FC<PostView> = (post) => {
   const { reactions } = post;
   return (
     <>
-      <Card className="border-none bg-card shadow-none max-sm:pr-3">
+      <Card className="border-none bg-card shadow-none dark:bg-[#181818] max-sm:pr-3">
         <CardContent className="grid grid-cols-[55px_1fr] gap-x-1 p-0">
           <PostDetail {...post} />
           <div className="col-start-2">
