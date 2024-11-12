@@ -13,8 +13,7 @@ import {
 import { ICON_MAP } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useAuthModalStore } from "@/store/auth/auth-modal.store";
-import { Camera } from "lucide-react";
-import { ChevronRight } from "lucide-react";
+import { Camera, ChevronRight } from "lucide-react";
 import { FC, useEffect, useState } from "react";
 
 export const AuthRegistrationModal: FC = () => {
@@ -37,7 +36,7 @@ export const AuthRegistrationModal: FC = () => {
       <DialogContent className="sm:max-w-md bg-background top-3/4">
         <DialogHeader>
           <DialogTitle className="flex w-full flex-col items-center gap-[1rem] text-center">
-            {/* <div className={cn( "[&_svg]:size-[3.25rem]", infoModal.iconColor)}> */}
+
             <div className={cn( "[&_svg]:size-[3.25rem]", "text-red-500")}>
               <TitleIcon/>
             </div>
