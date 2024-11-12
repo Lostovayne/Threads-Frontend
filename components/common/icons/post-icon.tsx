@@ -6,7 +6,7 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   width?: number;
 }
 
-const SVGComponent = ({ height = 24, width = 24, ...props }: Props) => (
+const PostIcon = ({ height = 24, width = 24, ...props }: Props) => (
   <svg
     aria-label="Crear"
     viewBox="0 0 26 26"
@@ -26,4 +26,4 @@ const SVGComponent = ({ height = 24, width = 24, ...props }: Props) => (
     />
   </svg>
 );
-export default SVGComponent;
+export default PostIcon;

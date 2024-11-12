@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import HeartIcon from "../icons/heart-icon";
 import HomeIcon from "../icons/home-icon";
 import PlusIcon from "../icons/plus-icon";
+import PostIcon from "../icons/post-icon";
 import SearchIcon from "../icons/search-icon";
 import UserIcon from "../icons/user-icon";
 import { IconNav } from "./icon-nav";
@@ -17,18 +18,19 @@ import { IconNav } from "./icon-nav";
 export const NavMobile = () => {
   const pathname = usePathname();
   return (
-    <nav className="fixed bottom-0 z-50 flex h-[68px] w-full items-center justify-between bg-white bg-opacity-80 px-2 backdrop-blur-md md:hidden">
+    <nav className="fixed bottom-0 z-50 flex h-[68px] w-full items-center justify-between bg-white bg-opacity-80 px-4 backdrop-blur-md dark:bg-black dark:bg-opacity-80 md:hidden">
       <IconNav
         icon={<HomeIcon isFilled={pathname === "/"} height={26} width={26} />}
         path="/"
       />
 
       <IconNav icon={<SearchIcon />} path="/search" />
+
       <Button
         variant={"ghost"}
-        className="h-12 w-16 rounded-xl text-[#b1b1b1] hover:text-black md:bg-[#f0f0f0]"
+        className="h-12 w-16 rounded-xl text-[#b1b1b1] hover:text-black dark:text-[#565656] md:bg-[#f0f0f0]"
       >
-        <PlusIcon height={26} width={26} />
+        <PostIcon />
       </Button>
       <IconNav
         icon={
@@ -40,7 +42,12 @@ export const NavMobile = () => {
         }
         path="/activity"
       />
-      <IconNav icon={<UserIcon height={26} width={26} />} path="/none" />
+      <IconNav
+        icon={
+          <UserIcon height={26} width={26} isFilled={pathname === "/user"} />
+        }
+        path="/none"
+      />
     </nav>
   );
 };
