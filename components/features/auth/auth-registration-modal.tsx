@@ -1,5 +1,6 @@
 "use client";
 
+import { InstagramRedirectButton } from "@/components/common/buttons/instagram-redirect-button";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -52,16 +53,7 @@ export const AuthRegistrationModal: FC = () => {
 
         <DialogFooter className="mt-3">
           <DialogClose asChild>
-            <Button
-              type="button"
-              variant="ghost"
-              onClick={() => console.log("hola")}
-              className="flex w-full justify-between gap-5 border border-foreground/30 p-7"
-            >
-              <Camera style={{ height: 36, width: 36 }} />
-              <span className="text-md font-bold">{infoModal.textButton}</span>
-              <ChevronRight />
-            </Button>
+            <InstagramRedirectButton textButton={infoModal.textButton}	 />
           </DialogClose>
         </DialogFooter>
       </DialogContent>
