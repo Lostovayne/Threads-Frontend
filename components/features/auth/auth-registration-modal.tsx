@@ -1,5 +1,6 @@
 "use client";
 
+import { InstagramRedirectButton } from "@/components/common/buttons/instagram-redirect-button";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -13,8 +14,7 @@ import {
 import { ICON_MAP } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useAuthModalStore } from "@/store/auth/auth-modal.store";
-import { Camera } from "lucide-react";
-import { ChevronRight } from "lucide-react";
+import { Camera, ChevronRight } from "lucide-react";
 import { FC, useEffect, useState } from "react";
 
 export const AuthRegistrationModal: FC = () => {
@@ -37,7 +37,7 @@ export const AuthRegistrationModal: FC = () => {
       <DialogContent className="sm:max-w-md bg-background top-3/4">
         <DialogHeader>
           <DialogTitle className="flex w-full flex-col items-center gap-[1rem] text-center">
-            {/* <div className={cn( "[&_svg]:size-[3.25rem]", infoModal.iconColor)}> */}
+
             <div className={cn( "[&_svg]:size-[3.25rem]", "text-red-500")}>
               <TitleIcon/>
             </div>
@@ -52,16 +52,7 @@ export const AuthRegistrationModal: FC = () => {
 
         <DialogFooter className="mt-3">
           <DialogClose asChild>
-            <Button
-              type="button"
-              variant="ghost"
-              onClick={() => console.log("hola")}
-              className="flex w-full justify-between gap-5 border border-foreground/30 p-7"
-            >
-              <Camera style={{ height: 36, width: 36 }} />
-              <span className="text-md font-bold">{infoModal.textButton}</span>
-              <ChevronRight />
-            </Button>
+            <InstagramRedirectButton textButton={infoModal.textButton}	 />
           </DialogClose>
         </DialogFooter>
       </DialogContent>
