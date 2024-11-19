@@ -54,7 +54,7 @@ export const POST_COMMENTS: PostViewComment[] = [
   {
     commentId: "2",
     id: "1",
-    description: "Comentario 2",
+    description: "🇵🇾LA SELECCIÓN PARAGUAYA DE GUSTAVO ALFARO 🇦🇷, LA PRIMERA EN PUNTUAR EN EL ALTO ANTE BOLIVIA.✅Además, el Profesor se encuentra INVICTO como DT de @Albirroja y en zona de Mundial 2026.",
     date: new Date('2024-11-04T10:00:00'),
     urlProfile: "/images/alice-1.webp",
     name: "romina_sita_misifu_",
@@ -64,11 +64,21 @@ export const POST_COMMENTS: PostViewComment[] = [
   {
     commentId: "3",
     id: "1",
-    description: "Comentario 3",
+    description: "Selena Gomez at the Oscars Governors Awards in Los Angeles, California [November 17].",
     date: new Date('2024-11-04T10:00:00'),
     urlProfile: "/images/alice-1.webp",
     name: "romina_sita_misifu_",
     reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
     media: [],
   },
+  {
+    commentId: "4",
+    id: "1",
+    description: "t estimates that ripping up bike lanes on Yonge Street, Bloor Street and University Avenue would cost Ontario taxpayers $48 million — on top of the $27 million the city spent installing the lanes.",
+    date: new Date('2024-11-04T10:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: ["/images/post-4.jpg", "/images/post-2.jpg"],
+  }
 ]

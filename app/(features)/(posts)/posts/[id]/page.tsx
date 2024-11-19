@@ -2,6 +2,7 @@ import { getPost } from "@/actions/sample-data/get-post.action";
 import { AuthRegistrationModal } from "@/components/features/auth/auth-registration-modal";
 import { Post } from "@/components/features/posts/post";
 import { PostComments } from "@/components/features/posts/post-comments";
+import { Separator } from "@/components/ui/separator";
 import type { PostViewWithComments } from "@/interfaces/post/post-view.interface";
 
 interface PostPageProps {
@@ -25,6 +26,7 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <div>
       <Post post={post.post} contentType="post-page" />
+      <Separator className="mt-1 bg-foreground/30" />
       <AuthRegistrationModal />
       <PostComments comments={post.comments} />
     </div>

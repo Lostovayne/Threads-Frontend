@@ -26,7 +26,7 @@ export const Post: FC<PostProps> = ({ post, contentType = "post" }) => {
           <div
             className={cn(" col-span-2", {
               "col-start-2": contentType === "post" || contentType === "post-comment",
-              "col-start-1 px-2": contentType === "post-page",
+              "col-start-1 px-2 ": contentType === "post-page",
             })}
           >
             <PostDetailContent
@@ -37,7 +37,7 @@ export const Post: FC<PostProps> = ({ post, contentType = "post" }) => {
           <div
             className={cn("", {
               "col-start-2": contentType === "post" || contentType === "post-comment",
-              "col-start-2 pl-2": contentType === "post-page",
+              "col-start-1 pl-2": contentType === "post-page",
             })}
           >
             <PostReactions {...reactions} />
