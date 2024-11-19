@@ -1,4 +1,4 @@
-import { PostView } from "@/interfaces/post/post-view.interface";
+import type { PostView, PostViewComment } from "@/interfaces/post/post-view.interface";
 
 export const POST_DATA: PostView[] = [
   {
@@ -39,3 +39,36 @@ export const POST_DATA: PostView[] = [
     reactions:{ likes: 7000, comments: 4200100, reposts: 3, shares: 4 },
   },
 ];
+
+export const POST_COMMENTS: PostViewComment[] = [
+  {
+    commentId: "1",
+    id: "1",
+    description: "Got to tour Cape Canaveral with one of your propulsion engineers last week with my grandsons. It was AWESOME!",
+    date: new Date('2024-11-18T17:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: ["/images/post-2.jpg", "/images/post-2.jpg"],
+  },
+  {
+    commentId: "2",
+    id: "1",
+    description: "Comentario 2",
+    date: new Date('2024-11-04T10:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: [],
+  },
+  {
+    commentId: "3",
+    id: "1",
+    description: "Comentario 3",
+    date: new Date('2024-11-04T10:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: [],
+  },
+]
