@@ -20,6 +20,6 @@ export const PostComment: FC<PostViewComment> = (comment) => {
     //     </CardContent>
     //   </Card>
     // </div>
-    <Post post={post} contentType="comment" />
+    <Post post={post} contentType="post-comment" />
   );
 };

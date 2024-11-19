@@ -24,7 +24,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div>
-      <Post post={post.post} contentType="comment" />
+      <Post post={post.post} contentType="post-page" />
       <AuthRegistrationModal />
       <PostComments comments={post.comments} />
     </div>
