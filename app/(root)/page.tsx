@@ -29,7 +29,7 @@ const PostList = () => {
         {POST_DATA.map((post) => (
           <div key={post.id}>
             <div className="px-0 pt-1 sm:px-5 sm:pt-3">
-              <Post {...post} />
+              <Post post={post} />
             </div>
             <Separator className="mt-1 bg-zinc-300/80 dark:bg-gray-200/15" />
           </div>

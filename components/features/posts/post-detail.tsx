@@ -27,13 +27,11 @@ export const PostDetail: FC<PostView> = (post) => {
             <MoreIcon />
           </Button>
         </div>
-        <div className="">
-          <div className="">
+      </div>
+        <div className="col-start-1 col-span-2 px-3  bg-red-800">
             <PostDetailDescription description={description} />
             <PostDetailMedia media={media} />
-          </div>
         </div>
-      </div>
     </>
   );
 };
