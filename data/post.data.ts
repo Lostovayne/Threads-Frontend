@@ -54,7 +54,7 @@ export const POST_COMMENTS: PostViewComment[] = [
   {
     commentId: "2",
     id: "1",
-    description: "🇵🇾LA SELECCIÓN PARAGUAYA DE GUSTAVO ALFARO 🇦🇷, LA PRIMERA EN PUNTUAR EN EL ALTO ANTE BOLIVIA.✅Además, el Profesor se encuentra INVICTO como DT de @Albirroja y en zona de Mundial 2026.",
+    description: "🇺🇦 | Ucrania | Zelensky amenaza a Rusia después de recibir autorización de Estados Unidos para atacar territorio ruso.\nLos ataques no se llevan a cabo con palabras, no se anuncian esas cosas. Los misiles hablarán por sí solos, seguro que lo harán masivamente .",
     date: new Date('2024-11-04T10:00:00'),
     urlProfile: "/images/alice-1.webp",
     name: "romina_sita_misifu_",
