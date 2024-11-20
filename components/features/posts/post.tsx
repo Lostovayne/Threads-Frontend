@@ -3,8 +3,8 @@ import type { PostView } from "@/interfaces/post/post-view.interface";
 import { cn } from "@/lib/utils";
 import { FC } from "react";
 
-import { PostDetailContent } from "./components/post-detail-content";
-import { PostDetail } from "./post-detail";
+import { PostDetailContent } from "./post-detail-content";
+import { PostDetailHeader } from "./post-detail-header";
 import { PostReactions } from "./post-reactions";
 
 interface PostProps {
@@ -23,7 +23,7 @@ export const Post: FC<PostProps> = ({ post, contentType = "post" }) => {
               contentType === "post-page" || contentType === "post-comment",
           })}
         >
-          <PostDetail {...post} />
+          <PostDetailHeader {...post} />
           <div
             className={cn("col-span-2", {
               "col-start-2":

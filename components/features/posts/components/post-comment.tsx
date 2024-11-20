@@ -3,7 +3,7 @@ import { PostViewComment } from "@/interfaces/post/post-view.interface";
 import { FC } from "react";
 
 import { Post } from "../post";
-import { PostDetail } from "../post-detail";
+import { PostDetail } from "../post-detail-header";
 import { PostReactions } from "../post-reactions";
 
 export const PostComment: FC<PostViewComment> = (comment) => {

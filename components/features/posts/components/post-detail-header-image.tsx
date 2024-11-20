@@ -6,7 +6,7 @@ interface PostDetailProfileImageProps {
 	size?: number;
 }
 
-export const PostDetailProfileImage: FC<PostDetailProfileImageProps> = ({ urlProfile, size = 9, }) => {
+export const PostDetailHeaderImage: FC<PostDetailProfileImageProps> = ({ urlProfile, size = 9, }) => {
 
 	return (
 		<figure className="flex justify-center mt-1">
