@@ -28,7 +28,7 @@ export class Format {
     } else if (hoursElapsed <= 24) {
       return `${hoursElapsed} horas`;
     } else if (daysElapsed <= daysLimit) {
-      return `${daysElapsed} días`;
+      return `${daysElapsed} ${daysElapsed === 1 ? "día" : "días"}`;
     } else {
       // Formatear la fecha en dd/mm/yyyy
       const day = date.getDate().toString().padStart(2, "0");

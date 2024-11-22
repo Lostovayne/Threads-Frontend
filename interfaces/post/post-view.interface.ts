@@ -14,3 +14,12 @@ export interface PostViewReactions {
   reposts: number;
   shares: number;
 }
+
+export interface PostViewComment extends PostView {
+  commentId: string;
+}
+
+export interface PostViewWithComments {
+  post: PostView;
+  comments: PostViewComment[];
+} 

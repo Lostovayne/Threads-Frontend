@@ -1,18 +1,48 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { PostView } from "@/interfaces/post/post-view.interface";
+import type { PostView } from "@/interfaces/post/post-view.interface";
+import { cn } from "@/lib/utils";
 import { FC } from "react";
 
-import { PostDetail } from "./post-detail";
+import { PostDetailContent } from "./post-detail-content";
+import { PostDetailHeader } from "./post-detail-header";
 import { PostReactions } from "./post-reactions";
 
-export const Post: FC<PostView> = (post) => {
+interface PostProps {
+  post: PostView;
+  contentType?: "post" | "post-page" | "post-comment";
+}
+export const Post: FC<PostProps> = ({ post, contentType = "post" }) => {
   const { reactions } = post;
   return (
     <>
       <Card className="border-none bg-card shadow-none dark:bg-[#181818] max-sm:pr-3">
-        <CardContent className="grid grid-cols-[55px_1fr] gap-x-1 p-0">
-          <PostDetail {...post} />
-          <div className="col-start-2">
+        <CardContent
+          className={cn("grid grid-cols-[55px_1fr] p-0", {
+            "gap-x-1": contentType === "post",
+            "gap-y-1":
+              contentType === "post-page" || contentType === "post-comment",
+          })}
+        >
+          <PostDetailHeader {...post} />
+          <div
+            className={cn("col-span-2", {
+              "col-start-2":
+                contentType === "post" || contentType === "post-comment",
+              "col-start-1 px-2": contentType === "post-page",
+            })}
+          >
+            <PostDetailContent
+              description={post.description}
+              media={post.media}
+            />
+          </div>
+          <div
+            className={cn({
+              "col-start-2":
+                contentType === "post" || contentType === "post-comment",
+              "col-start-1 pl-2": contentType === "post-page",
+            })}
+          >
             <PostReactions {...reactions} />
           </div>
         </CardContent>
