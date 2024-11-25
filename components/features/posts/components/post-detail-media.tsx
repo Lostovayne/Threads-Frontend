@@ -4,7 +4,8 @@ interface PostDetailMediaProps {
 
 export const PostDetailMedia: React.FC<PostDetailMediaProps> = ({ media }) => {
 	// TODO: mostrar múltiples imágenes
-
+	if ( !media.length) return null;
+	
 	return (
 		<div className="relative mt-2 flex h-auto  w-auto	 overflow-hidden">
 			<div className="">

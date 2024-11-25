@@ -6,7 +6,7 @@ interface PostDetailHeaderProps {
 	date: Date;
 }
 
-export const PostDetailtHeader: FC<PostDetailHeaderProps> = ({ name, date }) => {
+export const PostDetailtHeaderInfo: FC<PostDetailHeaderProps> = ({ name, date }) => {
 
 	return (
 		<div className="flex gap-2 items-center">

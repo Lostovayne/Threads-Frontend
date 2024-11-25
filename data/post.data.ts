@@ -1,4 +1,4 @@
-import { PostView } from "@/interfaces/post/post-view.interface";
+import type { PostView, PostViewComment } from "@/interfaces/post/post-view.interface";
 
 export const POST_DATA: PostView[] = [
   {
@@ -39,3 +39,46 @@ export const POST_DATA: PostView[] = [
     reactions:{ likes: 7000, comments: 4200100, reposts: 3, shares: 4 },
   },
 ];
+
+export const POST_COMMENTS: PostViewComment[] = [
+  {
+    commentId: "1",
+    id: "1",
+    description: "Got to tour Cape Canaveral with one of your propulsion engineers last week with my grandsons. It was AWESOME!",
+    date: new Date('2024-11-18T17:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: ["/images/post-2.jpg", "/images/post-2.jpg"],
+  },
+  {
+    commentId: "2",
+    id: "1",
+    description: "🇺🇦 | Ucrania | Zelensky amenaza a Rusia después de recibir autorización de Estados Unidos para atacar territorio ruso.\nLos ataques no se llevan a cabo con palabras, no se anuncian esas cosas. Los misiles hablarán por sí solos, seguro que lo harán masivamente .",
+    date: new Date('2024-11-04T10:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: [],
+  },
+  {
+    commentId: "3",
+    id: "1",
+    description: "Selena Gomez at the Oscars Governors Awards in Los Angeles, California [November 17].",
+    date: new Date('2024-11-04T10:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: [],
+  },
+  {
+    commentId: "4",
+    id: "1",
+    description: "t estimates that ripping up bike lanes on Yonge Street, Bloor Street and University Avenue would cost Ontario taxpayers $48 million — on top of the $27 million the city spent installing the lanes.",
+    date: new Date('2024-11-04T10:00:00'),
+    urlProfile: "/images/alice-1.webp",
+    name: "romina_sita_misifu_",
+    reactions: { likes: 3, comments: 5, reposts: 2, shares: 3 },
+    media: ["/images/post-4.jpg", "/images/post-2.jpg"],
+  }
+]
